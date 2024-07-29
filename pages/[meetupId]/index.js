@@ -38,7 +38,7 @@ export async function getStaticPaths() {
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
-    fallback: false, // or true if you want to dynamically fetch missing paths
+    fallback: 'blocking', // or true if you want to dynamically fetch missing paths
   };
 }
 
